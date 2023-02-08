@@ -1,6 +1,6 @@
 name: Publicar imagen Docker
 
-on:
+on: 
   push:
     branches:
       - main
@@ -22,14 +22,14 @@ jobs:
         name: Login to DockerHub
         uses: docker/login-action@v1
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: luipero
           password: ${{ secrets.DOCKERHUB_TOKEN }}
       -
         name: Login to GitHub Container Registry
         uses: docker/login-action@v1
         with:
           registry: ghcr.io
-          username: ${{ github.repository_owner }}
+          username: luipenrom
           password: ${{ secrets.GHRC_TOKEN }}
       -
         name: Build and push
@@ -38,6 +38,7 @@ jobs:
           context: .
           file: ./Dockerfile
           push: true
-          tags: |
-            br3baj3/practica7.1:latest 
-            ghcr.io/raul-profesor/practica7.1:latest 
+          tags: | #
+            luipero/practica_7.1:latest 
+            ghcr.io/luipenrom/practica_7.1:latest 
+
