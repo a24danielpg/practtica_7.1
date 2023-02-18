@@ -11,7 +11,8 @@ var animals = {
     "lion": "roar",
     "bird": "tweet",
     "pig": "oing",
-    "duck": "cua"
+    "duck": "cua",
+    "cow": "muuu"
 }
 
 function getAnimal() {
