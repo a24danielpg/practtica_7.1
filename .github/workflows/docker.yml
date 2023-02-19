@@ -1,4 +1,4 @@
-name: Publicar imagen Docker
+name: Publicar imagen Docker 2
 
 on: 
   push:
