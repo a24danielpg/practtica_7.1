@@ -39,6 +39,6 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: | #
-            CarPeAs/practica_7.1:latest 
+            carpeas/practica_7.1:latest 
             ghcr.io/carpeas/practica_7.1:latest 
 
