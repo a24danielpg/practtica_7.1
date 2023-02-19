@@ -40,5 +40,5 @@ jobs:
           push: true
           tags: | #
             CarPeAs/practica_7.1:latest 
-            ghcr.io/CarPeAs/practica_7.1:latest 
+            ghcr.io/carpeas/practica_7.1:latest 
 
