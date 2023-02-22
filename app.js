@@ -13,7 +13,8 @@ var animals = {
     "cow" : "moo",
     "lion": "roar",
     "pig" : "oink",
-    "wolf" : "howl"
+    "wolf" : "howl",
+    "raven" : "caw"
 }
 
 function getAnimal() {
