@@ -39,5 +39,4 @@ jobs:
           file: ./Dockerfile
           push: true
           tags: | #
-            raul-profesor/practica_7.1:latest 
-            ghcr.io/raul-profesor/practica_7.1:latest
+            https://github.com/juangabrieeel/practica5_1:latest
