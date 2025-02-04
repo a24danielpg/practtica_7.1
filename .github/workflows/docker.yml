@@ -38,5 +38,5 @@ jobs:
          file: ./Dockerfile
          push: true
          tags: |
-         rafarafer/practica_7.1:latest
-         ghcr.io/rafarafer/practica_7.1:latest
+         rafarafer/practica_7.1: latest
+         ghcr.io/rafarafer/practica_7.1: latest
