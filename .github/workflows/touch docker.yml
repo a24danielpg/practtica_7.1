@@ -40,4 +40,4 @@ jobs:
           push: true
           tags: | 
             miltonmusset/practica_7.1:latest 
-            ghcr.io/MiltonEb/practica_7.1:latest 
+            ghcr.io/miltoneb/practica_7.1:latest 
