@@ -1,0 +1,25 @@
+name: Granja Animales Node.js CI  # Nombre descriptivo para nuestro workflow
+
+on: # En este bloque on definimos cuándo va a ejecutarse nuestro workflow: 
+    # Cuando alguien haga push sobre la rama main
+    # Cuando alguien abra un pull request desde la rama main
+  push:
+   branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs: # Aquí se definen los jobs, en nuestro caso uno solo: build.
+  build:
+    runs-on: ubuntu-latest # Cada job corre en una plataforma esecífica, pudiendo elegir entre Linux, Windows o MacOS. En nuestro caso particular vamos a ejecutar nuestro job en un contenedor usando Ubuntu Linux.
+    steps: # Las tareas o pasos que ejecutará el job. Si un paso falla, por norma general, fallará todo el job.
+    - name: Checkout repository # Nombramos cada paso del job
+      uses: actions/checkout@v2 # Este paso básicamente hace un clonado del repositorio. Hace uso de una acción pre-empaquetada (actions/checkout@v2). Este tipo de acciones las suele proporcionar la comunidad de GitHub y, normalmente, ejecutan tareas que de otra forma supondrían múltiples pasos o supondrían una configuración muy repetitiva.
+    - name: Use Node.js
+      uses: actions/setup-node@v1 # Se trata de otra acción pre-empaquetada. Se encarga de instalar Node.js dentro del contenedor que está corriendo o ejecutando nuestro job. Podemos pasarle argumentos, en este caso con el bloque with le decimos qué versión de Node.js debe instalar.
+      with:
+        node-version: '18.x'
+    - name: Run Yarn # Estos pasos son el núcleo de nuestro job ya que se encargará de ejecutar yarn para instalar los módulos necesarios de Node.js y, en el último paso, ejecutar los tests con yarn tests
+      run: yarn
+    - name: Run tests
+      run: yarn test
